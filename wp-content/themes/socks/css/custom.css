@@ -1,0 +1,58 @@
+.loading-anim{
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: block;
+}
+
+.animation-bar {
+    position: relative;
+    height: 2px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    background: #FE5F27;
+    margin-top: 150px;
+}
+
+.animation-bar .circle {
+    position: absolute;
+    top: -30px;
+    margin-left: -30px;
+    height: 40px;
+    width: 40px;
+    left: 0;
+    background: #FE5F27;
+    border-radius: 30%;
+    -webkit-animation: move 5s infinite;
+}
+
+.loading-anim span,
+.animation-bar p {
+    position: absolute;
+    top: -22px;
+    right: -50px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.loading-anim span{
+    color: #FE5F27;
+    text-transform: capitalize;
+    position: relative;
+    top: inherit;
+    right: inherit;
+    font-size: 16px;
+    padding-top: 10px;
+    display: block;
+}
+
+@-webkit-keyframes move {
+    0% {left: 0;}
+    50% {left: 100%; -webkit-transform: rotate(450deg); width: 100px; height: 100px;}
+    75% {left: 100%; -webkit-transform: rotate(450deg); width: 100px; height: 100px;}
+    100% {right: 100%;}
+}
